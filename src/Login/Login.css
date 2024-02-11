@@ -1,0 +1,61 @@
+.login-form-header{
+  margin-left:4%
+}
+h2{
+  color:#5e6d7a;
+  margin-top: 0;
+}
+.Loginlabel{
+    font-size: smaller;
+}
+.Logininput{
+  border-radius: 8px;
+  font-size: smaller;
+  outline: none;
+  border-color: cadetblue;
+}
+::placeholder {
+  font-style: italic;
+  }
+.login-button{
+    border-radius: 8px;
+    border: none;
+    background-color: #5592c6;
+    color: white;
+    
+}
+.register-button{
+  border-radius: 8px;
+  margin-left: 1%; 
+  background-color: #2358b5;
+  color: white;
+  border: none;
+  
+}
+
+
+.Login{
+  margin: 0;
+  padding: 0;
+  background-image: url('../Images/BackgroundImage.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+  min-height: 100vh;
+}
+
+.login-form-body{
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  display:table-caption;
+  margin-left:2%;
+  margin-bottom:10%;
+}
+.login-form-footer{
+  margin-left:1%;
+}
+
+  
+  
