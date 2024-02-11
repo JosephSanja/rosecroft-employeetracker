@@ -1,4 +1,5 @@
 {
+  "homepage": "https://JosepSanja.github.io/rosecroft-employeetracker",
   "name": "rosecroft",
   "version": "0.1.0",
   "public": true,
@@ -18,7 +19,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "node suppress-source-map-warnings.js && react-scripts --openssl-legacy-provider start",
+    "start": "react-scripts --openssl-legacy-provider start",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build",
     "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
