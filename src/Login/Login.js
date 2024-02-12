@@ -61,7 +61,7 @@ const Login=() => {
     return (
       <div className='Login'>       
           <form onSubmit={ProceedLogin} className='login-form-header'>
-            <h2>Rosecroft Employee</h2>
+            <h2>Rosecroft Employee Tracker</h2>
             <div className='login-form-body'>
                 <label className="Loginlabel"> Username</label>
                 
