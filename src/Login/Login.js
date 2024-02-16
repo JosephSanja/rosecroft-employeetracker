@@ -18,7 +18,7 @@ const Login=() => {
       e.preventDefault();
       if(validate()){
         console.log("proceed");
-        fetch("http://localhost:8000/user/"+username).then((res)=>{
+        fetch("https://rosecroft-employee-tracker-data.onrender.com/user/"+username).then((res)=>{
           return res.json();
         }).then((resp)=>{
           console.log(resp)
