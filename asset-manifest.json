@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/rosecroft-employeetracker/static/css/main.49d9fc6c.css",
-    "main.js": "/rosecroft-employeetracker/static/js/main.843b59ac.js",
+    "main.js": "/rosecroft-employeetracker/static/js/main.c83f72d4.js",
     "static/js/144.e252e746.chunk.js": "/rosecroft-employeetracker/static/js/144.e252e746.chunk.js",
     "static/media/BackgroundImage.jpg": "/rosecroft-employeetracker/static/media/BackgroundImage.6be868b759a4251fdbb4.jpg",
     "index.html": "/rosecroft-employeetracker/index.html",
     "main.49d9fc6c.css.map": "/rosecroft-employeetracker/static/css/main.49d9fc6c.css.map",
-    "main.843b59ac.js.map": "/rosecroft-employeetracker/static/js/main.843b59ac.js.map",
+    "main.c83f72d4.js.map": "/rosecroft-employeetracker/static/js/main.c83f72d4.js.map",
     "144.e252e746.chunk.js.map": "/rosecroft-employeetracker/static/js/144.e252e746.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.49d9fc6c.css",
-    "static/js/main.843b59ac.js"
+    "static/js/main.c83f72d4.js"
   ]
 }
