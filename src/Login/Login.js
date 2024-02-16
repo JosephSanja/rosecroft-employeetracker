@@ -1,6 +1,7 @@
 import React from "react";
 import { useState} from 'react';
 import { ToastContainer,toast } from 'react-toastify';
+import { useNavigate } from "react-router-dom";
 import 'react-toastify/dist/ReactToastify.css';
 
 import './Login.css';
@@ -11,7 +12,7 @@ const Login=() => {
   
     const [username,usernameupdate] =useState('');
     const [password,passwordupdate] =useState('');
-    
+    const usenavigate =useNavigate()
     
     
     const ProceedLogin =(e) => {
@@ -31,6 +32,7 @@ const Login=() => {
           }else{
             if(resp.password === password){
               toast.success('Success');
+              usenavigate('/')
               
               
             }else{
