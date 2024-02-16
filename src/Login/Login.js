@@ -18,12 +18,14 @@ const Login=() => {
       e.preventDefault();
       if(validate()){
         console.log("proceed");
-        console.log(username);
+        
         fetch("https://rosecroft-employee-tracker-data.onrender.com/user/"+username).then((res)=>{
           return res.json();
         }).then((resp)=>{
-          console.log(resp)
-          if(Object.keys(resp).length===0){
+          console.log(resp);
+          //console.log(resp[Object.keys(resp)]);
+          
+          if(Object.keys(resp).length === 0){
             toast.error('Please enter valid username');
             
           }else{
