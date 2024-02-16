@@ -18,6 +18,7 @@ const Login=() => {
       e.preventDefault();
       if(validate()){
         console.log("proceed");
+        console.log(username);
         fetch("https://rosecroft-employee-tracker-data.onrender.com/user/"+username).then((res)=>{
           return res.json();
         }).then((resp)=>{
