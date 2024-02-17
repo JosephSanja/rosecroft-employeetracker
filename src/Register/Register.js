@@ -112,8 +112,8 @@ const Register = () => {
                                         <label>Country <span className="errmsg">*</span></label>
                                         <select value={country} onChange={e => countrychange(e.target.value)} className="form-control">
                                             <option value="india">India</option>
-                                            <option value="usa">USA</option>
-                                            <option value="singapore">Singapore</option>
+                                            <option value="UK">USA</option>
+                                            
                                         </select>
                                     </div>
                                 </div>
