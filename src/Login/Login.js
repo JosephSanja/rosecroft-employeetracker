@@ -1,7 +1,7 @@
 import React from "react";
-import { useState} from 'react';
+import { useEffect, useState } from "react";
 import { ToastContainer,toast } from 'react-toastify';
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import 'react-toastify/dist/ReactToastify.css';
 
 import './Login.css';
@@ -14,7 +14,10 @@ const Login=() => {
     const [password,passwordupdate] =useState('');
     const usenavigate =useNavigate()
     
-    
+    useEffect(()=>{
+      sessionStorage.clear();
+          },[]);
+
     const ProceedLogin =(e) => {
       e.preventDefault();
       if(validate()){
@@ -32,6 +35,8 @@ const Login=() => {
           }else{
             if(resp.password === password){
               toast.success('Success');
+              sessionStorage.setItem('username',username);
+              sessionStorage.setItem('userrole',resp.role);
               usenavigate('/')
               
               
@@ -80,7 +85,7 @@ const Login=() => {
             </div>
             <div className='login-form-footer'>
                 <button type="submit" className="login-button" > Login</button>
-                <button className="register-button" > Register</button>
+                <Link className="btn btn-success" to={'/register'}>New User</Link>
               </div>
               <ToastContainer />
           </form>
