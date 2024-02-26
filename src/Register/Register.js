@@ -112,7 +112,7 @@ const Register = () => {
                                         <label>Country <span className="errmsg">*</span></label>
                                         <select value={country} onChange={e => countrychange(e.target.value)} className="form-control">
                                             <option value="india">India</option>
-                                            <option value="UK">USA</option>
+                                            <option value="UK">UK</option>
                                             
                                         </select>
                                     </div>
@@ -123,7 +123,7 @@ const Register = () => {
                                         <textarea value={address} onChange={e => addresschange(e.target.value)} className="form-control"></textarea>
                                     </div>
                                 </div>
-                                <div className="col-lg-6">
+                                <div className="col-lg-9">
                                     <div className="form-group">
                                         <label>Gender</label>
                                         <br></br>

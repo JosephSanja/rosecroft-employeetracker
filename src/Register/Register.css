@@ -1,0 +1,10 @@
+form.container{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+label, input {
+    height: 25px;
+    padding: 5px;
+    box-sizing: border-box;
+  }
