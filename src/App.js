@@ -1,7 +1,7 @@
 
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './Home/Home';
+import ShiftScheduler from './Home/ShiftScheduler';
 import Login from './Login/Login';
 import Register from './Register/Register';
 import { ToastContainer } from 'react-toastify';
@@ -15,7 +15,7 @@ function App() {
       <BrowserRouter>
       <Appheader></Appheader>
       <Routes>
-        <Route path='/' element={<Home/>}></Route>
+        <Route path='/' element={<ShiftScheduler/>}></Route>
         <Route path='/login' element={<Login/>}></Route>
         <Route path='/register' element={<Register/>}></Route>
         
