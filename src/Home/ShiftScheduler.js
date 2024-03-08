@@ -32,6 +32,23 @@ const ShiftScheduler = () => {
             {employee.name}
           </button>
         ))}
+        <div>
+        <label for="start-date">Start Date:</label>
+        <input type="date" id="start-date" name="start-date"/>
+        <label for="start-time">Start Time:</label>
+        <input type="time" id="start-time" name="start-time"/><br></br>
+
+        <label for="end-date">End Date:</label>
+        <input type="date" id="end-date" name="end-date"/>
+
+        <label for="end-time">End Time:</label>
+        <input type="time" id="end-time" name="end-time"/><br></br>
+        </div>
+      
+        
+      
+      
+        
       </div>
       <table className="shift-table">
         <thead>
