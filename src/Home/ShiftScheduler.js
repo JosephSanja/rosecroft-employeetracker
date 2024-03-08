@@ -41,7 +41,7 @@ const ShiftScheduler = () => {
         <label for="end-date">End Date:</label>
         <input type="date" id="end-date" name="end-date"/>
 
-        <label for="end-time">End Time:</label>
+        <label for="end-time">End Time:</label><br></br>
         <input type="time" id="end-time" name="end-time"/><br></br>
         </div>
       
