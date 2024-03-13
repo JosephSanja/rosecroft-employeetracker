@@ -9,11 +9,23 @@ const ShiftScheduler = () => {
     { employee: "Mike", start: "12:00", end: "20:00" }
   ]);
 
-  const [employees, setEmployees] = useState([
-    { name: "John", id: 1 },
-    { name: "Jane", id: 2 },
-    { name: "Mike", id: 3 }
-  ]);
+  const [employees, setEmployees] = fetch("https://rosecroft-employee-tracker-data.onrender.com/user/").then((res)=>{
+    return res.json();
+  }).then((resp)=>{
+    console.log(resp);
+  })
+  
+  const addEmployee = (employee, startTime, endTime) => {
+    setShifts([...shifts,  { employee, start:startTime, end:endTime}
+      ]);
+  };
+
+  const handleDelete = (index) => {
+    let newArr = [...shifts   ];  
+    newArr.splice(index, 1);    
+    setShifts(newArr);
+  } 
+  
 
   // Function to handle adding a new shift
   const addShift = (employeeId, start, end) => {
@@ -41,7 +53,7 @@ const ShiftScheduler = () => {
         <label for="end-date">End Date:</label>
         <input type="date" id="end-date" name="end-date"/>
 
-        <label for="end-time">End Time:</label><br></br>
+        <label for="end-time">End Time:</label>
         <input type="time" id="end-time" name="end-time"/><br></br>
         </div>
       
