@@ -37,10 +37,13 @@ textarea { resize: vertical; }
     color: white;
     border: none; }
 
-link{
+.btn1{
     border-radius: 8px;
-  margin-left: 1%; 
-  background-color: #2358b5;
-  color: white;
-  border: none;
+    margin-left: 1%;
+    background-color: #2358b5;
+    color: white;
+    border: none;
+    text-decoration: none;
+    font-size: smaller;
+    padding: 0 17px;
 }
