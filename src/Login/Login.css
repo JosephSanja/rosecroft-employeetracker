@@ -32,6 +32,11 @@ h2{
   border: none;
   
 }
+.btn1 {border-radius: 8px;
+  margin-left: 1%; 
+  background-color: #2358b5;
+  color: white;
+  border: none;}
 
 
 .Login{

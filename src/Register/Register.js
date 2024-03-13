@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import "./Register.css";
 
 const Register = () => {
 
@@ -68,7 +69,7 @@ const Register = () => {
     }
     return (
         <div>
-            <div className="offset-lg-3 col-lg-6">
+            <div className="form1">
                 <form className="container" onSubmit={handlesubmit}>
                     <div className="card">
                         <div className="card-header">
@@ -77,7 +78,7 @@ const Register = () => {
                         <div className="card-body">
 
                             <div className="row">
-                                <div className="col-lg-6">
+                                <div className="col6">
                                     <div className="form-group">
                                         <label>User Name <span className="errmsg">*</span></label>
                                         <input value={id} onChange={e => idchange(e.target.value)} className="form-control"></input>
@@ -139,7 +140,7 @@ const Register = () => {
                         </div>
                         <div className="card-footer">
                             <button type="submit" className="btn btn-primary">Register</button> |
-                            <Link to={'/login'} className="btn btn-danger">Close</Link>
+                            <Link to={'/login'} className="btn1 btn-danger">Close</Link>
                         </div>
                     </div>
                 </form>
