@@ -80,3 +80,63 @@ select {
 .shift-button[type="submit"]:hover {
   background-color: #3e8e41;
 }
+
+@media (max-width: 767px) {
+  .shift-schedule {
+    margin: 20px 0;
+  }
+  .shift-table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow-x: auto;
+    display: block;
+    white-space: nowrap;
+  }
+  .shift-table th,
+  .shift-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    min-width: 150px;
+  }
+  .employee-selector {
+    margin-bottom: 20px;
+  }
+  table .shift-button {
+    margin: 0;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 3px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 10px;
+  }
+  select,
+  .i[type="time"],
+  .i[type="date"] {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    padding: 5px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .shift-button[type="button"] {
+    display: block;
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 14px;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+  }
+  .shift-button[type="button"]:hover {
+    background-color: #0056b3;
+  }
+}
