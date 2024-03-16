@@ -98,8 +98,9 @@ const ShiftSchedule = () => {
                 }
               >
                 <option value="">Select Type</option>
-                <option value="">Night Shift</option>
-                <option value="">Day Shift</option>
+                <option value="Night Shift">Night Shift</option>
+                <option value="Day Shift">Day Shift</option>
+                
                 
               </select>
             </td>
