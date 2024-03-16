@@ -6,6 +6,7 @@ const ShiftSchedule = () => {
   const [employees, setEmployees] = useState([]);
   const [newShift, setNewShift] = useState({
     employee: "",
+    type:"",
     start_time: "",
     end_time: "",
   });
@@ -98,8 +99,8 @@ const ShiftSchedule = () => {
                 }
               >
                 <option value="">Select Type</option>
-                <option value={newShift.type}>Night Shift</option>
-                <option value={newShift.type}>Day Shift</option>
+                <option value="Night Shift">Night Shift</option>
+                <option value="Day Shift">Day Shift</option>
                 
                 
               </select>
