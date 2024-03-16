@@ -67,15 +67,7 @@ const ShiftSchedule = () => {
           </tr>
         </thead>
         <tbody>
-          {shifts.map((shift, index) => (
-            <tr key={index}>
-              <td>{shift.employee}</td>
-              <td>{shift.type}</td>
-              <td>{shift.date}</td>
-              <td>{shift.start_time}</td>
-              <td>{shift.end_time}</td>
-            </tr>
-          ))}
+          
           <tr>
             <td>
               <select
@@ -109,6 +101,7 @@ const ShiftSchedule = () => {
             <td>
               <input
                 type="Date"
+                class ="i"
                 value={newShift.date}
                 onChange={(e) =>
                   setNewShift({ ...newShift, date: e.target.value })
@@ -118,6 +111,7 @@ const ShiftSchedule = () => {
             <td>
               <input
                 type="time"
+                class ="i"
                 value={newShift.start_time}
                 onChange={(e) =>
                   setNewShift({ ...newShift, start_time: e.target.value })
@@ -127,16 +121,27 @@ const ShiftSchedule = () => {
             <td>
               <input
                 type="time"
+                calss = "i"
                 value={newShift.end_time}
                 onChange={(e) =>
                   setNewShift({ ...newShift, end_time: e.target.value })
                 }
               />
             </td>
+            <button class="shift-button" onClick={addShift}>Add Shift</button>
           </tr>
+          {shifts.map((shift, index) => (
+            <tr key={index}>
+              <td>{shift.employee}</td>
+              <td>{shift.type}</td>
+              <td>{shift.date}</td>
+              <td>{shift.start_time}</td>
+              <td>{shift.end_time}</td>
+            </tr>
+          ))}
         </tbody>
       </table>
-      <button onClick={addShift}>Add Shift</button>
+      
     </div>
   );
 };

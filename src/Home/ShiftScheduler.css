@@ -21,7 +21,7 @@ h1 {
   margin-bottom: 30px;
 }
 
-button {
+.shift-button {
   font-size: 1rem;
   padding: 10px 20px;
   margin: 5px;
@@ -32,7 +32,7 @@ button {
   transition: all 0.2s ease;
 }
 
-button:hover {
+.shift-button:hover {
   background-color: #f2f2f2;
 }
 
@@ -55,7 +55,7 @@ th {
   color: #555;
 }
 
-input,
+input i,
 select {
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -65,7 +65,7 @@ select {
   font-size: 0.9rem;
 }
 
-button[type="submit"] {
+.shift-button[type="submit"] {
   margin-top: 20px;
   background-color: #4CAF50;
   color: white;
@@ -77,6 +77,6 @@ button[type="submit"] {
   transition: all 0.2s ease;
 }
 
-button[type="submit"]:hover {
+.shift-button[type="submit"]:hover {
   background-color: #3e8e41;
 }
