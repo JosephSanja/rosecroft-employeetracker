@@ -34,6 +34,8 @@ const ShiftSchedule = () => {
       setShifts([...shifts, newShiftData]);
       setNewShift({
         employee: "",
+        type:"",
+        date:"",
         start_time: "",
         end_time: "",
       });
@@ -56,6 +58,8 @@ const ShiftSchedule = () => {
         <thead>
           <tr>
             <th>Employee</th>
+            <th>Shift Type</th>
+            <th>Date</th>
             <th>Start Time</th>
             <th>End Time</th>
           </tr>
@@ -64,6 +68,8 @@ const ShiftSchedule = () => {
           {shifts.map((shift, index) => (
             <tr key={index}>
               <td>{shift.employee}</td>
+              <td>{shift.type}</td>
+              <td>{shift.date}</td>
               <td>{shift.start_time}</td>
               <td>{shift.end_time}</td>
             </tr>
@@ -83,6 +89,28 @@ const ShiftSchedule = () => {
                   </option>
                 ))}
               </select>
+            </td>
+            <td>
+              <select
+                value={newShift.type}
+                onChange={(e) =>
+                  setNewShift({ ...newShift, type: e.target.value })
+                }
+              >
+                <option value="">Select Type</option>
+                <option value="">Night Shift</option>
+                <option value="">Day Shift</option>
+                
+              </select>
+            </td>
+            <td>
+              <input
+                type="Date"
+                value={newShift.date}
+                onChange={(e) =>
+                  setNewShift({ ...newShift, date: e.target.value })
+                }
+              />
             </td>
             <td>
               <input
