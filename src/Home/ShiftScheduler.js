@@ -11,7 +11,7 @@ const ShiftSchedule = () => {
   });
 
   const fetchData = async () => {
-    const shiftsResponse = await fetch("https://rosecroft-employee-tracker-data.onrender.com/shifts");
+    const shiftsResponse = await fetch("https://rosecroft-employee-tracker-data.onrender.com/shift");
     const shiftsData = await shiftsResponse.json();
     setShifts(shiftsData);
 
@@ -21,7 +21,7 @@ const ShiftSchedule = () => {
   };
 
   const addShift = async () => {
-    const response = await fetch("https://rosecroft-employee-tracker-data.onrender.com/shifts", {
+    const response = await fetch("https://rosecroft-employee-tracker-data.onrender.com/shift", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
