@@ -11,17 +11,17 @@ const ShiftSchedule = () => {
   });
 
   const fetchData = async () => {
-    const shiftsResponse = await fetch("https://your-api-endpoint/shifts");
+    const shiftsResponse = await fetch("https://rosecroft-employee-tracker-data.onrender.com/shifts");
     const shiftsData = await shiftsResponse.json();
     setShifts(shiftsData);
 
-    const employeesResponse = await fetch("https://your-api-endpoint/employees");
+    const employeesResponse = await fetch("https://rosecroft-employee-tracker-data.onrender.com/user");
     const employeesData = await employeesResponse.json();
     setEmployees(employeesData);
   };
 
   const addShift = async () => {
-    const response = await fetch("https://your-api-endpoint/shifts", {
+    const response = await fetch("https://rosecroft-employee-tracker-data.onrender.com/shifts", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
