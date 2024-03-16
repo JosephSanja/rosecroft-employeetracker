@@ -1,53 +1,82 @@
 .shift-schedule {
   font-family: Arial, sans-serif;
-  margin: 0 auto;
-  width: 80%;
+  width: 100%;
+  max-width: 800px;
+  margin: 50px auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
   text-align: center;
-  margin-bottom: 30px;
 }
 
 .employee-selector {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
+  justify-content: center;
+  margin-bottom: 30px;
 }
 
-.employee-selector button {
-  background-color: #f0f0f0;
-  border: none;
-  border-radius: 5px;
+button {
+  font-size: 1rem;
   padding: 10px 20px;
-  text-transform: capitalize;
+  margin: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: white;
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-.shift-table {
-  border-collapse: collapse;
+button:hover {
+  background-color: #f2f2f2;
+}
+
+table {
   width: 100%;
+  border-collapse: collapse;
+  text-align: center;
 }
 
 th,
 td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  font-size: 0.9rem;
 }
 
 th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  color: #555;
+}
+
+input,
+select {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 0.9rem;
+}
+
+button[type="submit"] {
+  margin-top: 20px;
   background-color: #4CAF50;
   color: white;
-  padding: 12px 8px;
-  text-align: left;
-  text-transform: uppercase;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-.shift-table tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-.shift-table td:last-child {
-  text-align: right;
+button[type="submit"]:hover {
+  background-color: #3e8e41;
 }
