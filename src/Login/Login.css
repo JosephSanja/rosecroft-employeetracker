@@ -42,16 +42,45 @@ h2{
   padding: 0 17px;}
 
 
-.Login{
-  margin: 0;
-  padding: 0;
-  background-image: url('../Images/BackgroundImage.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  .Login {
+    margin: 0;
+    padding: 0;
+    background-image: url('../Images/BackgroundImage.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
   
-  min-height: 100vh;
-}
+    /* Add media query for mobile screens */
+    @media screen and (max-width: 767px) {
+      /* Apply mobile styles here */
+      .form-group {
+        width: 80%;
+        margin: 20px auto;
+      }
+  
+      .btn {
+        width: 50%;
+        margin: 20px auto;
+      }
+    }
+  
+    /* Add media query for desktop screens */
+    @media screen and (min-width: 768px) {
+      /* Apply desktop styles here */
+      .form-group {
+        width: 50%;
+        float: left;
+        margin: 50px 0;
+      }
+  
+      .btn {
+        width: 30%;
+        float: left;
+        margin: 50px 0;
+      }
+    }
+  }
 
 .login-form-body{
   align-items: center;
