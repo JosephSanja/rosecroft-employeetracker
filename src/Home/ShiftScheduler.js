@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import './ShiftScheduler.css';
 
 const ShiftSchedule = () => {
   // Initialize state variables for shifts, employees, and new shift
