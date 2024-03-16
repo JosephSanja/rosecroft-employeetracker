@@ -73,7 +73,7 @@ const Register = () => {
                 <form className="container" onSubmit={handlesubmit}>
                     <div className="card">
                         <div className="card-header">
-                            <h1>User Registeration</h1>
+                            <h1>New User</h1>
                         </div>
                         <div className="card-body">
 
@@ -139,7 +139,7 @@ const Register = () => {
 
                         </div>
                         <div className="card-footer">
-                            <button type="submit" className="btn btn-primary">Register</button> |
+                            <button type="submit" className="btn btn-primary">Register</button> 
                             <Link to={'/login'} className="btn1 btn-danger">Close</Link>
                         </div>
                     </div>

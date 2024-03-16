@@ -37,7 +37,7 @@ const Login=() => {
               toast.success('Success');
               sessionStorage.setItem('username',username);
               sessionStorage.setItem('userrole',resp.role);
-              usenavigate('/')
+              usenavigate('/ShiftScheduler')
               
               
             }else{
@@ -85,7 +85,7 @@ const Login=() => {
             </div>
             <div className='login-form-footer'>
                 <button type="submit" className="login-button" > Login</button>
-                <Link className="btn btn-success" to={'/register'}>New User</Link>
+                <Link className="btn-success" to={'/register'}>New User</Link>
               </div>
               <ToastContainer />
           </form>

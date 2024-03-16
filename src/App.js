@@ -15,7 +15,7 @@ function App() {
       <BrowserRouter>
       <Appheader></Appheader>
       <Routes>
-        <Route path='/' element={<ShiftScheduler/>}></Route>
+        <Route path='/ShiftScheduler' element={<ShiftScheduler/>}></Route>
         <Route path='/login' element={<Login/>}></Route>
         <Route path='/register' element={<Register/>}></Route>
         

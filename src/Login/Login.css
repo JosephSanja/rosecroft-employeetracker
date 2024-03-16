@@ -26,20 +26,15 @@ h2{
 }
 .btn-success{
   border-radius: 8px;
-  margin-left: 1%; 
-  background-color: #2358b5;
-  color: white;
-  border: none;
-  
-}
-.btn {border-radius: 8px;
   margin-left: 1%;
   background-color: #2358b5;
   color: white;
   border: none;
   text-decoration: none;
   font-size: smaller;
-  padding: 0 17px;}
+  text-align: center;
+}
+
 
 
   .Login {
@@ -54,30 +49,51 @@ h2{
     /* Add media query for mobile screens */
     @media screen and (max-width: 767px) {
       /* Apply mobile styles here */
-      .form-group {
+      .Login {
         width: 80%;
         margin: 20px auto;
       }
   
-      .btn {
-        width: 50%;
-        margin: 20px auto;
+      .login-button {
+        width: 15%;
+        margin: 16px 3px;
+        color: white;
+        border: none;
+        text-decoration: none;
+        font-size: smaller;
+        text-align: center;
+      }
+      .btn-success {
+        width: 20%;
+        margin: 16px auto;
+        background-color: #2358b5;
+        color: white;
+        border: none;
+        text-decoration: none;
+        font-size: smaller;
+        text-align: center;
+        padding-inline: 12px;
       }
     }
   
     /* Add media query for desktop screens */
     @media screen and (min-width: 768px) {
       /* Apply desktop styles here */
-      .form-group {
+      .Login {
         width: 50%;
         float: left;
         margin: 50px 0;
       }
   
-      .btn {
-        width: 30%;
+      .login-button {
+        width: 7%;
         float: left;
-        margin: 50px 0;
+        margin: 16px 9px;
+      }
+      .btn-success {
+        width: 7%;
+        float: left;
+        margin: 16px 0;
       }
     }
   }
