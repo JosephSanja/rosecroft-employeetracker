@@ -37,7 +37,7 @@ const Login=() => {
               toast.success('Success');
               sessionStorage.setItem('username',username);
               sessionStorage.setItem('userrole',resp.role);
-              usenavigate('/ShiftScheduler')
+              usenavigate('/')
               
               
             }else{
