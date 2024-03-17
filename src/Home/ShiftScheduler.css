@@ -7,6 +7,11 @@
   padding: 20px;
   border-radius: 5px;
   overflow: hidden;
+  background-image: url('../Images/BackgroundImage.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
 }
 
 h1 {
@@ -84,6 +89,13 @@ select {
 @media (max-width: 767px) {
   .shift-schedule {
     margin: 20px 0;
+    
+    padding: 0;
+    background-image: url('../Images/BackgroundImage.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
   }
   .shift-table {
     width: 100%;
