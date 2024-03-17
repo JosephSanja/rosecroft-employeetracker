@@ -8,7 +8,7 @@ const Register = () => {
     const [id, idchange] = useState("");
     const [name, namechange] = useState("");
     const [password, passwordchange] = useState("");
-    const [level, levelchange] = useState("");
+    const [level, levelchange] = useState("Carer");
     const [email, emailchange] = useState("");
     const [phone, phonechange] = useState("");
     const [country, countrychange] = useState("UK");
@@ -105,8 +105,8 @@ const Register = () => {
                                     <div className="form-group">
                                         <label>Employee Level <span className="errmsg"></span></label>
                                         <select value={level} onChange={e => levelchange(e.target.value)} className="form-control">
-                                        <option>Carer</option>
-                                        <option>Senior Carer</option>
+                                        <option value="Carer">Carer</option>
+                                        <option value="Senior Carer">Senior Carer</option>
                                         </select>
                                     </div>
                                 </div>
