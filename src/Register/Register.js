@@ -54,7 +54,7 @@ const Register = () => {
 
     const handlesubmit = (e) => {
             e.preventDefault();
-            let regobj = { id, name, password, email, phone, country, address, gender };
+            let regobj = { id, name, password, level,email, phone, country, address, gender };
             if (IsValidate()) {
             //console.log(regobj);
             fetch("https://rosecroft-employee-tracker-data.onrender.com/user", {
