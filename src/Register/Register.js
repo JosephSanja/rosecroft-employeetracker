@@ -28,10 +28,7 @@ const Register = () => {
             isproceed = false;
             errormessage += ' Fullname';
         }
-        if (level === null || level === '') {
-            isproceed = false;
-            errormessage += ' Level';
-        }
+        
         if (password === null || password === '') {
             isproceed = false;
             errormessage += ' Password';
