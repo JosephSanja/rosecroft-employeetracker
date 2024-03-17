@@ -103,7 +103,7 @@ const Register = () => {
                                 </div>
                                 <div className="col-lg-6">
                                     <div className="form-group">
-                                        <label>Full Name <span className="errmsg">*</span></label>
+                                        <label>Employee Level <span className="errmsg"></span></label>
                                         <select value={level} onChange={e => levelchange(e.target.value)} className="form-control">
                                         <option>Carer</option>
                                         <option>Senior Carer</option>
