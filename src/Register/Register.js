@@ -8,6 +8,7 @@ const Register = () => {
     const [id, idchange] = useState("");
     const [name, namechange] = useState("");
     const [password, passwordchange] = useState("");
+    const [level, levelchange] = useState("");
     const [email, emailchange] = useState("");
     const [phone, phonechange] = useState("");
     const [country, countrychange] = useState("UK");
@@ -26,6 +27,10 @@ const Register = () => {
         if (name === null || name === '') {
             isproceed = false;
             errormessage += ' Fullname';
+        }
+        if (level === null || level === '') {
+            isproceed = false;
+            errormessage += ' Level';
         }
         if (password === null || password === '') {
             isproceed = false;
@@ -94,6 +99,15 @@ const Register = () => {
                                     <div className="form-group">
                                         <label>Full Name <span className="errmsg">*</span></label>
                                         <input value={name} onChange={e => namechange(e.target.value)} className="form-control"></input>
+                                    </div>
+                                </div>
+                                <div className="col-lg-6">
+                                    <div className="form-group">
+                                        <label>Full Name <span className="errmsg">*</span></label>
+                                        <select value={level} onChange={e => levelchange(e.target.value)} className="form-control">
+                                        <option>Carer</option>
+                                        <option>Senior Carer</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div className="col-lg-6">

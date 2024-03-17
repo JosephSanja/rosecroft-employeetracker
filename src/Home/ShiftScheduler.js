@@ -8,9 +8,12 @@ const ShiftSchedule = () => {
   const [newShift, setNewShift] = useState({
     employee: "",
     type:"",
+    date:"",
     start_time: "",
     end_time: "",
   });
+  const [nameFilter, setNameFilter] = useState("all");
+  const [dateFilter, setDateFilter] = useState(new Date());
 
   const fetchData = async () => {
     const shiftsResponse = await fetch("https://rosecroft-employee-tracker-data.onrender.com/shift");
@@ -36,6 +39,7 @@ const ShiftSchedule = () => {
       setShifts([...shifts, newShiftData]);
       setNewShift({
         employee: "",
+        level:"",
         type:"",
         date:"",
         start_time: "",
@@ -44,9 +48,37 @@ const ShiftSchedule = () => {
     }
   };
 
+  const deleteShift = async (shiftToDelete) => {
+    const confirmation = window.confirm("Do you want to delete this shift?");
+  
+    if (confirmation) {
+      const response = await fetch(`https://rosecroft-employee-tracker-data.onrender.com/shift/${shiftToDelete.id}`, {
+        method: "DELETE",
+      });
+  
+      if (response.ok) {
+        const newShifts = shifts.filter((shift) => shift.id !== shiftToDelete.id);
+        setShifts(newShifts);
+      }
+    }
+  };
+
   useEffect(() => {
     fetchData();
   }, []);
+
+  
+
+//...
+
+const filteredShifts = shifts.filter((shift) =>
+nameFilter === "all" || (!nameFilter && shift.employee.toLowerCase() === shift.employee.toLowerCase()) || shift.employee.toLowerCase().includes(nameFilter.toLowerCase()) &&
+  new Date(shift.date).toDateString() >=
+    new Date(dateFilter.setHours(0, 0, 0, 0)).toDateString() &&
+  new Date(shift.date).toDateString() <=
+    new Date(dateFilter.setHours(23, 59, 59, 999)).toDateString()
+);
+  
 
   return (
     <div className="shift-schedule">
@@ -59,16 +91,21 @@ const ShiftSchedule = () => {
       <table className="shift-table">
         <thead>
           <tr>
+           
             <th>Employee</th>
+            <th>Employee Level</th>
             <th>Shift Type</th>
             <th>Date</th>
             <th>Start Time</th>
             <th>End Time</th>
+            <button class="shift-button" onClick={addShift}>Add Shift</button>
           </tr>
+          
+          
         </thead>
         <tbody>
           
-          <tr>
+          
             <td>
               <select
                 value={newShift.employee}
@@ -80,6 +117,21 @@ const ShiftSchedule = () => {
                 {employees.map((employee) => (
                   <option key={employee.id} value={employee.id}>
                     {employee.name}
+                  </option>
+                ))}
+              </select>
+            </td>
+            <td>
+              <select
+                value={newShift.employee}
+                onChange={(e) =>
+                  setNewShift({ ...newShift, employee: e.target.value })
+                }
+              >
+                <option value="">Select Level</option>
+                {employees.map((employee) => (
+                  <option key={employee.id} value={employee.id}>
+                    {employee.level}
                   </option>
                 ))}
               </select>
@@ -128,20 +180,43 @@ const ShiftSchedule = () => {
                 }
               />
             </td>
-            <button class="shift-button" onClick={addShift}>Add Shift</button>
-          </tr>
-          {shifts.map((shift, index) => (
-            <tr key={index}>
-              <td>{shift.employee}</td>
-              <td>{shift.type}</td>
-              <td>{shift.date}</td>
-              <td>{shift.start_time}</td>
-              <td>{shift.end_time}</td>
-            </tr>
-          ))}
+            <td>
+              <input
+                type="text"
+                placeholder="Filter by name..."
+                value={nameFilter}
+                onChange={(e) => setNameFilter(e.target.value)}
+              />
+            </td>
+            <td>
+            <input
+              type="date"
+              value={dateFilter.toISOString().split("T")[0]}
+              onChange={(e) => setDateFilter(new Date(e.target.value))}
+            />
+            </td>
+            
+            
+            
+                  
+                  {filteredShifts.map((shift, index) => (
+                  <tr key={shift.id}>
+                    <td>{shift.employee}</td>
+                    <td>{shift.level}</td>
+                    <td>{shift.type}</td>
+                    <td>{shift.date}</td>
+                    <td>{shift.start_time}</td>
+                    <td>{shift.end_time}</td>
+                    <td>
+                  
+                      <button onClick={() => deleteShift(shift)}>Delete</button>
+                    </td>
+                  </tr>
+                ))}
+          
+           
         </tbody>
       </table>
-      
     </div>
   );
 };
