@@ -72,7 +72,7 @@ const ShiftSchedule = () => {
 //...
 
 const filteredShifts = shifts.filter((shift) =>
-nameFilter === "all" || (!nameFilter && shift.employee.toLowerCase() === shift.employee.toLowerCase()) || shift.employee.toLowerCase().includes(nameFilter.toLowerCase()) &&
+nameFilter === "" || (!nameFilter && shift.employee.toLowerCase() === shift.employee.toLowerCase()) || shift.employee.toLowerCase().includes(nameFilter.toLowerCase()) &&
   new Date(shift.date).toDateString() >=
     new Date(dateFilter.setHours(0, 0, 0, 0)).toDateString() &&
   new Date(shift.date).toDateString() <=
