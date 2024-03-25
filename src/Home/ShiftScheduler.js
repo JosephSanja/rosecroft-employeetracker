@@ -12,8 +12,7 @@ const ShiftSchedule = () => {
     start_time: "",
     end_time: "",
   });
-  const [nameFilter, setNameFilter] = useState("all");
-  const [dateFilter, setDateFilter] = useState(new Date());
+  
 
   const fetchData = async () => {
     const shiftsResponse = await fetch("https://rosecroft-employee-tracker-data.onrender.com/shift");
@@ -71,13 +70,7 @@ const ShiftSchedule = () => {
 
 //...
 
-const filteredShifts = shifts.filter((shift) =>
-nameFilter === "" || (!nameFilter && shift.employee.toLowerCase() === shift.employee.toLowerCase()) || shift.employee.toLowerCase().includes(nameFilter.toLowerCase()) &&
-  new Date(shift.date).toDateString() >=
-    new Date(dateFilter.setHours(0, 0, 0, 0)).toDateString() &&
-  new Date(shift.date).toDateString() <=
-    new Date(dateFilter.setHours(23, 59, 59, 999)).toDateString()
-);
+
   
 
   return (
@@ -180,40 +173,13 @@ nameFilter === "" || (!nameFilter && shift.employee.toLowerCase() === shift.empl
                 }
               />
             </td>
-            <td>
-              <input
-                type="text"
-                placeholder="Filter by name..."
-                value={nameFilter}
-                onChange={(e) => setNameFilter(e.target.value)}
-              />
-            </td>
-            <td>
-            <input
-              type="date"
-              value={dateFilter.toISOString().split("T")[0]}
-              onChange={(e) => setDateFilter(new Date(e.target.value))}
-            />
-            </td>
             
             
             
                   
-                  {filteredShifts.map((shift, index) => (
-                  <tr key={shift.id}>
-                    <td>{shift.employee}</td>
-                    <td>{shift.level}</td>
-                    <td>{shift.type}</td>
-                    <td>{shift.date}</td>
-                    <td>{shift.start_time}</td>
-                    <td>{shift.end_time}</td>
-                    <td>
                   
-                      <button onClick={() => deleteShift(shift)}>Delete</button>
-                    </td>
-                  </tr>
-                ))}
-          
+                      <button onClick={() => deleteShift()}>Delete</button>
+                 
            
         </tbody>
       </table>
